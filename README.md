@@ -88,42 +88,42 @@ IDE: Eclipse, IntelliJ IDEA, hoặc chạy trực tiếp bằng cmd/terminal.
 
 1. Chạy Server
 
-Mở terminal / IDE, chạy class server:
+- Mở terminal / IDE, chạy class server:
 
 java LTM.SMTPServerTCP
 
 
-Terminal sẽ hiển thị:
+- Terminal sẽ hiển thị:
 
-Server đang chạy trên cổng 9999
+- Server đang chạy trên cổng 9999
 
 
-Server đã sẵn sàng nhận kết nối từ client.
+- Server đã sẵn sàng nhận kết nối từ client.
 
 2. Chạy client Người Nhận (Receiver)
 
-Mở ClientGuiReceiver:
+- Mở ClientGuiReceiver:
 
 java LTM.ClientGuiReceiver
 
 
-GUI xuất hiện với:
+- GUI xuất hiện với:
 
-Ô nhập Tên người nhận
+- Ô nhập Tên người nhận
 
-Nút Kết nối Server
+- Nút Kết nối Server
 
-Nút Nhận email mới
+- Nút Nhận email mới
 
-Ô log hiển thị email
+- Ô log hiển thị email
 
-Nhập tên người nhận, ví dụ: hung → nhấn Kết nối Server
+- Nhập tên người nhận, ví dụ: hung → nhấn Kết nối Server
 
-Client sẽ đăng ký với server để nhận email push.
+- Client sẽ đăng ký với server để nhận email push.
 
 3. Chạy client Người Gửi (Sender)
 
-Mở ClientGuiSenderTCP:
+- Mở ClientGuiSenderTCP:
 
 java LTM.ClientGuiSenderTCP
 
@@ -160,19 +160,19 @@ Nếu người nhận online → email được push vào emailList của client
 
 4. Nhận email trên client Người Nhận
 
-Trên client Người Nhận, nhấn Nhận email mới
+- Trên client Người Nhận, nhấn Nhận email mới
 
-GUI sẽ hiển thị nội dung email vừa nhận vào ô log.
+- GUI sẽ hiển thị nội dung email vừa nhận vào ô log.
 
-Email đã hiển thị → được xóa khỏi danh sách email mới
+- Email đã hiển thị → được xóa khỏi danh sách email mới
 
 ✅ Lưu ý:
 
-Mỗi client phải kết nối server trước khi gửi/nhận email.
+- Mỗi client phải kết nối server trước khi gửi/nhận email.
 
-Tên người nhận phải trùng với client đã đăng ký để push notification hoạt động.
+- Tên người nhận phải trùng với client đã đăng ký để push notification hoạt động.
 
-Có thể chạy nhiều client Người Nhận cùng lúc → server push email tới từng client tương ứng.
+- Có thể chạy nhiều client Người Nhận cùng lúc → server push email tới từng client tương ứng.
 
 ##📞 5. Liên hệ
 
