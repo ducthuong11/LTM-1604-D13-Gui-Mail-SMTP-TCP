@@ -65,7 +65,7 @@ Thành phần hệ thống
 ---
 
 ## 🛠️ 2. Công nghệ sử dụng
-Ngôn ngữ lập trình: Java 17
+Ngôn ngữ lập trình: Java 23 SE
 Thư viện:
 java.net.ServerSocket, java.net.Socket (xử lý TCP).
 BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
