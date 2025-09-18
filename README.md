@@ -4,7 +4,7 @@
     </a>
 </h2>
 <h2 align="center">
-   NETWORK PROGRAMMING
+   Gửi email mô phỏng SMTP qua Socket
 </h2>
 <div align="center">
     <p align="center">
@@ -145,3 +145,4 @@ Day la email thu nghiem.
 Email: ducthuong246ss@gmail.com
 
 GitHub: ducthuong11
+
