@@ -32,111 +32,29 @@ Sinh viên nắm được cách thức hoạt động của các giao thức t�
 Ứng dụng được vào các bài toán lập trình mạng nâng cao (xây dựng mail relay, bảo mật bằng TLS, xác thực tài khoản…).
 
 ## 🏗️ 2. Thành phần hệ thống
-### 🔹 Chức năng của Server (SMTP Server)
-1. **Khởi động và lắng nghe**
-   - Server mở cổng `9999` để chờ kết nối.
-   - In ra thông báo:
-     ```
-     📡 UDP SMTP Server đang chạy tại cổng 9999
-     ```
-
-2. **Xử lý lệnh HELO**
-   - Nhận:  
-     ```
-     HELO client.com
-     ```
-   - Trả lời:  
-     ```
-     250 Hello client.com
-     ```
-
-3. **Xử lý lệnh MAIL FROM**
-   - Nhận:  
-     ```
-     MAIL FROM:<a@b.com>
-     ```
-   - Kiểm tra email → nếu hợp lệ:  
-     ```
-     250 Sender OK
-     ```
-   - Nếu không hợp lệ:  
-     ```
-     550 Invalid sender address
-     ```
-
-4. **Xử lý lệnh RCPT TO**
-   - Nhận:  
-     ```
-     RCPT TO:<c@d.com>
-     ```
-   - Kiểm tra email → nếu hợp lệ:  
-     ```
-     250 Recipient OK
-     ```
-   - Nếu không hợp lệ:  
-     ```
-     550 Invalid recipient address
-     ```
-
-5. **Xử lý lệnh DATA**
-   - Nhận:  
-     ```
-     DATA
-     ```
-   - Trả lời:  
-     ```
-     354 Start mail input; end with <CRLF>.<CRLF>
-     ```
-   - Nhận nhiều dòng nội dung cho đến khi Client gửi `.`.
-
-6. **Lưu nội dung email**
-   - Sau khi nhận xong nội dung, server lưu email vào file `mails/mail_yyyyMMdd_HHmmss.txt`:
-     ```
-     From: a@b.com
-     To: c@d.com
-     Date: Mon Sep 16 21:30:25 ICT 2025
-     Message:
-     Xin chào, đây là email thử nghiệm.
-     ```
-
-7. **Kết thúc phiên làm việc**
-   - Nhận:  
-     ```
-     QUIT
-     ```
-   - Trả lời:  
-     ```
-     221 Bye
-     ```
-   - Xóa session Client.
-
----
-
-### 🔹Chức năng của Client (SMTP Client)
-
-1. **Khởi động chương trình**
+2.1 **Khởi động chương trình**
    - Hiển thị menu hướng dẫn nhập lệnh từng bước.
 
-2. **Gửi lệnh HELO**
+2.2 **Gửi lệnh HELO**
    - Người dùng nhập tên → gửi `HELO <tên>` đến Server.
    - Nhận phản hồi `250 Hello <tên>`.
 
-3. **Gửi lệnh MAIL FROM**
+2.3 **Gửi lệnh MAIL FROM**
    - Người dùng nhập email người gửi.
    - Gửi `MAIL FROM:<email>`.
    - Nhận phản hồi từ Server.
 
-4. **Gửi lệnh RCPT TO**
+2.4 **Gửi lệnh RCPT TO**
    - Người dùng nhập email người nhận.
    - Gửi `RCPT TO:<email>`.
    - Nhận phản hồi từ Server.
 
-5. **Gửi lệnh DATA + nội dung email**
+2.5 **Gửi lệnh DATA + nội dung email**
    - Client gửi `DATA`.
    - Sau đó cho phép người dùng nhập nhiều dòng nội dung.
    - Kết thúc khi người dùng nhập dấu `.`.
 
-6. **Gửi lệnh QUIT**
+2.6 **Gửi lệnh QUIT**
    - Client gửi `QUIT`.
    - Nhận phản hồi `221 Bye`.
    - Hiển thị:  
@@ -146,8 +64,6 @@ Sinh viên nắm được cách thức hoạt động của các giao thức t�
 
 ---
 
-## 🏗 Kiến trúc hệ thống
-
 ## 🛠️ 3. Công nghệ sử dụng
 Ngôn ngữ lập trình: Java 17
 Thư viện:
@@ -156,3 +72,75 @@ BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
 Giao thức: SMTP (Simple Mail Transfer Protocol).
 Công cụ IDE: Eclipse / IntelliJ IDEA.
 Môi trường chạy: Windows / Linux / macOS.
+
+## ⚙️ 4. Các bước cài đặt & Chạy ứng dụng
+🛠️ 4.1. Yêu cầu hệ thống
+
+Máy bạn cần có Java 17 (hoặc Java 8+ cũng được).
+IDE: Eclipse, IntelliJ IDEA, hoặc chạy trực tiếp bằng cmd/terminal.
+
+📥 4.2. Các bước chạy chương trình
+
+1. Chạy Server
+
+Trong Package Explorer, tìm file Server.java (hoặc tên file Server của bạn).
+Nhấp chuột phải → Run As → Java Application
+Console sẽ hiển thị:
+✅ Server đang chạy trên cổng 9999
+
+2. Chạy Client
+
+Mở file Client.java
+
+Nhấp chuột phải → Run As → Java Application
+
+Console Client hiển thị menu nhập lệnh.
+
+3. Gửi email mô phỏng
+
+Theo thứ tự các lệnh:
+
+HELO → nhập tên:
+
+HELO Thuong
+
+
+MAIL FROM → nhập email người gửi:
+
+MAIL FROM:thuong@example.com
+
+
+RCPT TO → nhập email người nhận:
+
+RCPT TO:huong@example.com
+
+
+DATA → nhập nội dung email nhiều dòng, kết thúc bằng .
+
+DATA
+Chao Hương,
+Day la email thu nghiem.
+.
+
+
+QUIT → kết thúc phiên:
+
+QUIT
+
+
+Console Client hiển thị:
+
+✅ Phiên SMTP đã kết thúc.
+
+4. Kiểm tra email trên Server
+
+Server sẽ in ra console tất cả email nhận được, ví dụ:
+
+Email từ thuong@example.com đến huong@example.com:
+Chao Hương,
+Day la email thu nghiem.
+
+##📞 5. Liên hệ
+
+Email: ducthuong246ss@gmail.com
+GitHub: ducthuong11
