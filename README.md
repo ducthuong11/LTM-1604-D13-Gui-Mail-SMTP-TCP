@@ -81,69 +81,98 @@ BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
 ## ⚙️ 4. Các bước cài đặt & Chạy ứng dụng
 🛠️ 4.1. Yêu cầu hệ thống
 
-Máy bạn cần có Java 17 (hoặc Java 8+ cũng được).
+Máy bạn cần có Java >17 (hoặc Java 8+ cũng được).
 IDE: Eclipse, IntelliJ IDEA, hoặc chạy trực tiếp bằng cmd/terminal.
 
 📥 4.2. Các bước chạy chương trình
 
 1. Chạy Server
 
-Trong Package Explorer, tìm file Server.java (hoặc tên file Server của bạn).
-Nhấp chuột phải → Run As → Java Application
-Console sẽ hiển thị:
-✅ Server đang chạy trên cổng 9999
+Mở terminal / IDE, chạy class server:
 
-2. Chạy Client
-
-Mở file Client.java
-
-Nhấp chuột phải → Run As → Java Application
-
-Console Client hiển thị menu nhập lệnh.
-
-3. Gửi email mô phỏng
-
-Theo thứ tự các lệnh:
-
-HELO → nhập tên:
-
-HELO Thuong
+java LTM.SMTPServerTCP
 
 
-MAIL FROM → nhập email người gửi:
+Terminal sẽ hiển thị:
 
-MAIL FROM:thuong@example.com
-
-
-RCPT TO → nhập email người nhận:
-
-RCPT TO:huong@example.com
+Server đang chạy trên cổng 9999
 
 
-DATA → nhập nội dung email nhiều dòng, kết thúc bằng .
+Server đã sẵn sàng nhận kết nối từ client.
 
-DATA
-Chao Hương,
-Day la email thu nghiem.
-.
+2. Chạy client Người Nhận (Receiver)
 
+Mở ClientGuiReceiver:
 
-QUIT → kết thúc phiên:
-
-QUIT
+java LTM.ClientGuiReceiver
 
 
-Console Client hiển thị:
+GUI xuất hiện với:
 
-✅ Phiên SMTP đã kết thúc.
+Ô nhập Tên người nhận
 
-4. Kiểm tra email trên Server
+Nút Kết nối Server
 
-Server sẽ in ra console tất cả email nhận được, ví dụ:
+Nút Nhận email mới
 
-Email từ thuong@example.com đến huong@example.com:
-Chao Hương,
-Day la email thu nghiem.
+Ô log hiển thị email
+
+Nhập tên người nhận, ví dụ: hung → nhấn Kết nối Server
+
+Client sẽ đăng ký với server để nhận email push.
+
+3. Chạy client Người Gửi (Sender)
+
+Mở ClientGuiSenderTCP:
+
+java LTM.ClientGuiSenderTCP
+
+
+GUI xuất hiện với:
+
+Ô nhập Người gửi
+
+Ô nhập Người nhận
+
+Ô nhập Tiêu đề
+
+Ô nhập Nội dung
+
+Nút Kết nối Server
+
+Nút Gửi Email
+
+Nhập thông tin email:
+
+Người gửi: thang
+
+Người nhận: hung (trùng tên client nhận)
+
+Tiêu đề: Test Email
+
+Nội dung: Hello, đây là email demo.
+
+Nhấn Kết nối Server → sau đó nhấn Gửi Email
+
+Server lưu email vào folder emails.
+
+Nếu người nhận online → email được push vào emailList của client nhận.
+
+4. Nhận email trên client Người Nhận
+
+Trên client Người Nhận, nhấn Nhận email mới
+
+GUI sẽ hiển thị nội dung email vừa nhận vào ô log.
+
+Email đã hiển thị → được xóa khỏi danh sách email mới
+
+✅ Lưu ý:
+
+Mỗi client phải kết nối server trước khi gửi/nhận email.
+
+Tên người nhận phải trùng với client đã đăng ký để push notification hoạt động.
+
+Có thể chạy nhiều client Người Nhận cùng lúc → server push email tới từng client tương ứng.
 
 ##📞 5. Liên hệ
 
