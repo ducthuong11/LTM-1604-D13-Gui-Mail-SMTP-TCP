@@ -65,13 +65,13 @@ Thành phần hệ thống
 ---
 
 ## 🛠️ 2. Công nghệ sử dụng
-Ngôn ngữ lập trình: Java 23 SE
-Thư viện:
+- Ngôn ngữ lập trình: Java 23 SE
+- Thư viện:
 java.net.ServerSocket, java.net.Socket (xử lý TCP).
 BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
-Giao thức: SMTP (Simple Mail Transfer Protocol).
-Công cụ IDE: Eclipse / IntelliJ IDEA.
-Môi trường chạy: Windows / Linux / macOS.
+-Giao thức: SMTP (Simple Mail Transfer Protocol).
+-Công cụ IDE: Eclipse / IntelliJ IDEA.
+-Môi trường chạy: Windows / Linux / macOS.
 
 ## 🚀 3. Hình ảnh các chức năng
 ![alt text](image.png)
