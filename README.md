@@ -75,6 +75,8 @@ Môi trường chạy: Windows / Linux / macOS.
 
 ## 🚀 3. Hình ảnh các chức năng
 ![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
 
 ## ⚙️ 4. Các bước cài đặt & Chạy ứng dụng
 🛠️ 4.1. Yêu cầu hệ thống
