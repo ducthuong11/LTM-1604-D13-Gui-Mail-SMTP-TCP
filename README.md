@@ -87,35 +87,41 @@ BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
 
 ## ⚙️ 4. Các bước cài đặt & Chạy ứng dụng
 🛠️ Yêu cầu hệ thống
-- Hệ điều hành: Windows 10/11, macOS, Linux.
-- Java Development Kit (JDK): Phiên bản 8 trở lên
+- Hệ điều hành: Windows 10/11, macOS hoặc Linux
+
+- Java Development Kit (JDK): Phiên bản 8 trở lên (khuyến nghị JDK 17)
+
 - RAM: Tối thiểu 2GB
-- IDE: Eclipse
+
+- IDE khuyến nghị: Eclipse / IntelliJ IDEA / NetBeans
 
 🚀 Clone source code
 - Mở terminal/cmd và chạy lệnh:
 
 git clone https://github.com/ducthuong11/LTM-1604-D13-Gui-Mail-SMTP-TCP.git
-
 cd LTM-1604-D13-Gui-Mail-SMTP-TCP
+
 
 
 📥 Các bước chạy chương trình
 
-1. Khởi động Server
+🔹 Bước 1: Khởi động Server
 
-- Chạy server trước để lắng nghe kết nối TCP:'
+Chạy lệnh:
 
-  java SMTPServer
+java SMTPServer
 
-- Server đã sẵn sàng nhận kết nối từ client.
 
-2. Khởi động Client gửi email
-- Mở terminal/cmd mới, chạy:
+👉 Server sẽ lắng nghe kết nối từ các client gửi/nhận email.
+
+🔹 Bước 2: Khởi động Client gửi email
+
+Mở terminal/cmd mới và chạy:
 
 java ClientGuiSenderTCP_Fancy
 
-👉 Một cửa sổ GUI hiện ra cho phép nhập:
+
+👉 Một cửa sổ GUI hiện ra, cho phép nhập:
 
 Người nhận
 
@@ -123,14 +129,16 @@ Tiêu đề
 
 Nội dung
 
-Sau đó nhấn Gửi để gửi email đến server.
+Nhấn Gửi để gửi email đến server.
 
-3. Khởi động Client nhận email
-- Mở thêm terminal/cmd khác, chạy:
+🔹 Bước 3: Khởi động Client nhận email
+
+Mở thêm terminal/cmd khác và chạy:
 
 java ClientGuiReceiver
 
-👉 Cửa sổ GUI hiển thị các email đã nhận từ server.
+
+👉 Cửa sổ GUI hiển thị email đã nhận từ server.
 
 ✅ Lưu ý:
 
@@ -140,13 +148,17 @@ java ClientGuiReceiver
 
 - Có thể chạy nhiều client Người Nhận cùng lúc → server push email tới từng client tương ứng.
 
-##📞 5. Liên hệ
-Nếu bạn có bất kỳ thắc mắc hay góp ý nào, vui lòng liên hệ:
+## 📞 5. Liên hệ
 
 👤 Họ và tên: Nguyễn Đức Thường
+
 🎓 Lớp: CNTT 16-04
+
 📍 Địa chỉ: Hà Đông, Hà Nội
+
 📧 Email: ducthuong246ss@gmail.com
+
 📱 Số điện thoại: 0865879212
+
 
 
