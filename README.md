@@ -68,10 +68,12 @@ Thành phần hệ thống
 - Ngôn ngữ lập trình: Java 23 SE
 - Thư viện:
 java.net.ServerSocket, java.net.Socket (xử lý TCP).
+
 BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
--Giao thức: SMTP (Simple Mail Transfer Protocol).
--Công cụ IDE: Eclipse / IntelliJ IDEA.
--Môi trường chạy: Windows / Linux / macOS.
+
+- Giao thức: SMTP (Simple Mail Transfer Protocol).
+- Công cụ IDE: Eclipse / IntelliJ IDEA.
+- Môi trường chạy: Windows / Linux / macOS.
 
 ## 🚀 3. Hình ảnh các chức năng
 <img width="531" height="364" alt="image" src="https://github.com/user-attachments/assets/b07d2d2e-7aea-4359-836d-08d9ef018148" />
@@ -94,7 +96,9 @@ BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
 - Mở terminal/cmd và chạy lệnh:
 
 git clone https://github.com/ducthuong11/LTM-1604-D13-Gui-Mail-SMTP-TCP.git
+
 cd LTM-1604-D13-Gui-Mail-SMTP-TCP
+
 
 📥 Các bước chạy chương trình
 
@@ -144,4 +148,5 @@ Nếu bạn có bất kỳ thắc mắc hay góp ý nào, vui lòng liên hệ:
 📍 Địa chỉ: Hà Đông, Hà Nội
 📧 Email: ducthuong246ss@gmail.com
 📱 Số điện thoại: 0865879212
+
 
