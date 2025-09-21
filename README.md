@@ -97,10 +97,10 @@ BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
 
 🚀 Clone source code
 - Mở terminal / cmd và chạy lệnh sau:
-
+ ```
 git clone https://github.com/ducthuong11/LTM-1604-D13-Gui-Mail-SMTP-TCP.git
 cd LTM-1604-D13-Gui-Mail-SMTP-TCP
-
+ ```
 
 
 📥 Các bước chạy chương trình
@@ -108,19 +108,19 @@ cd LTM-1604-D13-Gui-Mail-SMTP-TCP
 🔹 Bước 1: Khởi động Server
 
 Chạy lệnh:
-
+ ```
 java SMTPServer
-
+ ```
 
 👉 Server sẽ lắng nghe kết nối từ các client gửi/nhận email.
 
 🔹 Bước 2: Khởi động Client gửi email
 
 Mở terminal/cmd mới và chạy:
+ ```
+java ClientGuiSenderTCP
 
-java ClientGuiSenderTCP_Fancy
-
-
+ ```
 👉 Một cửa sổ GUI hiện ra, cho phép nhập:
 
 Người nhận
@@ -134,9 +134,9 @@ Nhấn Gửi để gửi email đến server.
 🔹 Bước 3: Khởi động Client nhận email
 
 Mở thêm terminal/cmd khác và chạy:
-
+ ```
 java ClientGuiReceiver
-
+ ```
 
 👉 Cửa sổ GUI hiển thị email đã nhận từ server.
 
@@ -159,6 +159,7 @@ java ClientGuiReceiver
 📧 Email: ducthuong246ss@gmail.com
 
 📱 Số điện thoại: 0865879212
+
 
 
 
