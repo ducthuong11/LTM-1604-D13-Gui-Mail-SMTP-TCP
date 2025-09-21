@@ -116,24 +116,24 @@ java SMTPServer
 
 🔹 Bước 2: Khởi động Client gửi email
 
-Mở terminal/cmd mới và chạy:
+- Mở terminal/cmd mới và chạy:
  ```
 java ClientGuiSenderTCP
 
  ```
 👉 Một cửa sổ GUI hiện ra, cho phép nhập:
 
-Người nhận
+- Người nhận
 
-Tiêu đề
+- Tiêu đề
 
-Nội dung
+- Nội dung
 
-Nhấn Gửi để gửi email đến server.
+- Nhấn Gửi để gửi email đến server.
 
 🔹 Bước 3: Khởi động Client nhận email
 
-Mở thêm terminal/cmd khác và chạy:
+- Mở thêm terminal/cmd khác và chạy:
  ```
 java ClientGuiReceiver
  ```
@@ -159,6 +159,7 @@ java ClientGuiReceiver
 📧 Email: ducthuong246ss@gmail.com
 
 📱 Số điện thoại: 0865879212
+
 
 
 
