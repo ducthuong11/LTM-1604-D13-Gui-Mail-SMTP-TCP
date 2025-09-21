@@ -88,9 +88,10 @@ BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
 - Hệ điều hành: Windows 10/11, macOS, Linux.
 - Java Development Kit (JDK): Phiên bản 8 trở lên
 - RAM: Tối thiểu 2GB
-IDE: Eclipse
+- IDE: Eclipse
+
 🚀 Clone source code
-Mở terminal/cmd và chạy lệnh:
+- Mở terminal/cmd và chạy lệnh:
 
 git clone https://github.com/ducthuong11/LTM-1604-D13-Gui-Mail-SMTP-TCP.git
 cd LTM-1604-D13-Gui-Mail-SMTP-TCP
@@ -143,3 +144,4 @@ Nếu bạn có bất kỳ thắc mắc hay góp ý nào, vui lòng liên hệ:
 📍 Địa chỉ: Hà Đông, Hà Nội
 📧 Email: ducthuong246ss@gmail.com
 📱 Số điện thoại: 0865879212
+
