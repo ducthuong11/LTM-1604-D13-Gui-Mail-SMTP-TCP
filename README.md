@@ -74,97 +74,58 @@ BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
 -Môi trường chạy: Windows / Linux / macOS.
 
 ## 🚀 3. Hình ảnh các chức năng
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+<img width="531" height="364" alt="image" src="https://github.com/user-attachments/assets/b07d2d2e-7aea-4359-836d-08d9ef018148" />
+<img width="532" height="439" alt="image" src="https://github.com/user-attachments/assets/7ce587be-5acb-4abb-bdd4-04ec8f515d07" />
+<img width="531" height="365" alt="image" src="https://github.com/user-attachments/assets/5b47b063-d8b4-495a-ac2e-2df888c0bc0a" />
+<img width="536" height="432" alt="image" src="https://github.com/user-attachments/assets/07cd801b-6f14-4090-a0d9-4de822c9786b" />
+
+
+
+
 
 ## ⚙️ 4. Các bước cài đặt & Chạy ứng dụng
-🛠️ 4.1. Yêu cầu hệ thống
+🛠️ Yêu cầu hệ thống
+- Hệ điều hành: Windows 10/11, macOS, Linux.
+- Java Development Kit (JDK): Phiên bản 8 trở lên
+- RAM: Tối thiểu 2GB
+IDE: Eclipse
+🚀 Clone source code
+Mở terminal/cmd và chạy lệnh:
 
-Máy bạn cần có Java >17 (hoặc Java 8+ cũng được).
-IDE: Eclipse, IntelliJ IDEA, hoặc chạy trực tiếp bằng cmd/terminal.
+git clone https://github.com/ducthuong11/LTM-1604-D13-Gui-Mail-SMTP-TCP.git
+cd LTM-1604-D13-Gui-Mail-SMTP-TCP
 
-📥 4.2. Các bước chạy chương trình
+📥 Các bước chạy chương trình
 
-1. Chạy Server
+1. Khởi động Server
 
-- Mở terminal / IDE, chạy class server:
+- Chạy server trước để lắng nghe kết nối TCP:'
 
-java LTM.SMTPServerTCP
-
-
-- Terminal sẽ hiển thị:
-
-- Server đang chạy trên cổng 9999
-
+  java SMTPServer
 
 - Server đã sẵn sàng nhận kết nối từ client.
 
-2. Chạy client Người Nhận (Receiver)
+2. Khởi động Client gửi email
+- Mở terminal/cmd mới, chạy:
 
-- Mở ClientGuiReceiver:
+java ClientGuiSenderTCP_Fancy
 
-java LTM.ClientGuiReceiver
+👉 Một cửa sổ GUI hiện ra cho phép nhập:
 
+Người nhận
 
-- GUI xuất hiện với:
+Tiêu đề
 
-- Ô nhập Tên người nhận
+Nội dung
 
-- Nút Kết nối Server
+Sau đó nhấn Gửi để gửi email đến server.
 
-- Nút Nhận email mới
+3. Khởi động Client nhận email
+- Mở thêm terminal/cmd khác, chạy:
 
-- Ô log hiển thị email
+java ClientGuiReceiver
 
-- Nhập tên người nhận, ví dụ: hung → nhấn Kết nối Server
-
-- Client sẽ đăng ký với server để nhận email push.
-
-3. Chạy client Người Gửi (Sender)
-
-- Mở ClientGuiSenderTCP:
-
-java LTM.ClientGuiSenderTCP
-
-
-GUI xuất hiện với:
-
-Ô nhập Người gửi
-
-Ô nhập Người nhận
-
-Ô nhập Tiêu đề
-
-Ô nhập Nội dung
-
-Nút Kết nối Server
-
-Nút Gửi Email
-
-Nhập thông tin email:
-
-Người gửi: thang
-
-Người nhận: hung (trùng tên client nhận)
-
-Tiêu đề: Test Email
-
-Nội dung: Hello, đây là email demo.
-
-Nhấn Kết nối Server → sau đó nhấn Gửi Email
-
-Server lưu email vào folder emails.
-
-Nếu người nhận online → email được push vào emailList của client nhận.
-
-4. Nhận email trên client Người Nhận
-
-- Trên client Người Nhận, nhấn Nhận email mới
-
-- GUI sẽ hiển thị nội dung email vừa nhận vào ô log.
-
-- Email đã hiển thị → được xóa khỏi danh sách email mới
+👉 Cửa sổ GUI hiển thị các email đã nhận từ server.
 
 ✅ Lưu ý:
 
@@ -175,9 +136,10 @@ Nếu người nhận online → email được push vào emailList của client
 - Có thể chạy nhiều client Người Nhận cùng lúc → server push email tới từng client tương ứng.
 
 ##📞 5. Liên hệ
+Nếu bạn có bất kỳ thắc mắc hay góp ý nào, vui lòng liên hệ:
 
-Email: ducthuong246ss@gmail.com
-
-GitHub: ducthuong11
-
-© 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
+👤 Họ và tên: Nguyễn Đức Thường
+🎓 Lớp: CNTT 16-04
+📍 Địa chỉ: Hà Đông, Hà Nội
+📧 Email: ducthuong246ss@gmail.com
+📱 Số điện thoại: 0865879212
