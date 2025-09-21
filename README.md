@@ -96,7 +96,7 @@ BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
 - IDE khuyến nghị: Eclipse / IntelliJ IDEA / NetBeans
 
 🚀 Clone source code
-- Mở terminal/cmd và chạy lệnh:
+- Mở terminal / cmd và chạy lệnh sau:
 
 git clone https://github.com/ducthuong11/LTM-1604-D13-Gui-Mail-SMTP-TCP.git
 cd LTM-1604-D13-Gui-Mail-SMTP-TCP
@@ -159,6 +159,7 @@ java ClientGuiReceiver
 📧 Email: ducthuong246ss@gmail.com
 
 📱 Số điện thoại: 0865879212
+
 
 
 
