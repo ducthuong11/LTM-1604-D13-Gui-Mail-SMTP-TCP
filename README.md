@@ -76,10 +76,11 @@ BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
 - Môi trường chạy: Windows / Linux / macOS.
 
 ## 🚀 3. Hình ảnh các chức năng
-<img width="531" height="364" alt="image" src="https://github.com/user-attachments/assets/b07d2d2e-7aea-4359-836d-08d9ef018148" />
-<img width="532" height="439" alt="image" src="https://github.com/user-attachments/assets/7ce587be-5acb-4abb-bdd4-04ec8f515d07" />
-<img width="531" height="365" alt="image" src="https://github.com/user-attachments/assets/5b47b063-d8b4-495a-ac2e-2df888c0bc0a" />
-<img width="536" height="432" alt="image" src="https://github.com/user-attachments/assets/07cd801b-6f14-4090-a0d9-4de822c9786b" />
+<img width="581" height="296" alt="image" src="https://github.com/user-attachments/assets/d179b651-3d9d-48a5-a899-7cc6a0404188" />
+<img width="678" height="482" alt="image" src="https://github.com/user-attachments/assets/74acd59d-cdd7-4e10-bfcd-8dc7e7072f2d" />
+<img width="1363" height="483" alt="image" src="https://github.com/user-attachments/assets/ae40fbb8-9fbc-4780-8aca-5644273463a2" />
+
+
 
 
 
@@ -159,6 +160,7 @@ java ClientGuiReceiver
 📧 Email: ducthuong246ss@gmail.com
 
 📱 Số điện thoại: 0865879212
+
 
 
 
