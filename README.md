@@ -22,6 +22,7 @@
 ## 📖 1. Giới thiệu
 - Tên đề tài: Gửi email mô phỏng SMTP qua Socket
 - Mục tiêu:
+  
 Hiểu cơ chế hoạt động cơ bản của giao thức SMTP.
 
 Thực hành lập trình Socket trong Java để mô phỏng quá trình gửi/nhận email.
@@ -154,6 +155,7 @@ java ClientGuiReceiver
 📧 Email: ducthuong246ss@gmail.com
 
 📱 Số điện thoại: 0865879212
+
 
 
 
