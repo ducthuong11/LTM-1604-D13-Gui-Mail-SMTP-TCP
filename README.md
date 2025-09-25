@@ -33,7 +33,7 @@ Sinh viên nắm được cách thức hoạt động của các giao thức t�
 
 Thành phần hệ thống
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ffac1903-860d-47b0-ae31-40253074a97d" />
+<img width="567" height="375" alt="image" src="https://github.com/user-attachments/assets/c9e7003e-dee3-4168-a118-d8b2ccd7c785" />
 
 
 
@@ -136,6 +136,7 @@ java ClientGuiReceiver
 📧 Email: ducthuong246ss@gmail.com
 
 📱 Số điện thoại: 0865879212
+
 
 
 
