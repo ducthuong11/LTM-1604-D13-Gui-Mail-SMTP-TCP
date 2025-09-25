@@ -33,29 +33,24 @@ Sinh viên nắm được cách thức hoạt động của các giao thức t�
 
 Thành phần hệ thống
 
-+-----------------+
-|     Client      |
-|-----------------|
-| LoginForm       |
-| MailClient      |
-| - Soạn thư      |
-| - Inbox         |
-| - Sent          |
++-----------------+          TCP Socket           +-----------------+
+|     Client      |  <------------------------>  |     Server      |
+|-----------------|                              |-----------------|
+| LoginForm       |                              | SMTPServer      |
+| MailClient      |                              | - inbox map     |
+| - Soạn thư      |                              | - sent map      |
+| - Hộp thư đến   |                              | - save/load     |
+| - Đã gửi        |                              +-----------------+
 +-----------------+
          |
-         | TCP Socket (ObjectInputStream/ObjectOutputStream)
+         | Lưu / Tải
          v
-+-----------------+
-|     Server      |
-|-----------------|
-| SMTPServer      |
-| - inbox map     |
-| - sent map      |
-| - save/load     |
-+-----------------+
-         ^
-         |
-   File messages.dat
+    +-----------------+
+    |  messages.dat   |
+    | - inboxMap      |
+    | - sentMap       |
+    +-----------------+
+
 
 
 ---
@@ -157,6 +152,7 @@ java ClientGuiReceiver
 📧 Email: ducthuong246ss@gmail.com
 
 📱 Số điện thoại: 0865879212
+
 
 
 
