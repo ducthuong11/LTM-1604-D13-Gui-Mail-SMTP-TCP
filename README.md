@@ -32,35 +32,31 @@ Sinh viên nắm được cách thức hoạt động của các giao thức t�
 Ứng dụng được vào các bài toán lập trình mạng nâng cao (xây dựng mail relay, bảo mật bằng TLS, xác thực tài khoản…).
 
 Thành phần hệ thống
-**Khởi động chương trình**
-   - Hiển thị menu hướng dẫn nhập lệnh từng bước.
 
-**Gửi lệnh HELO**
-   - Người dùng nhập tên → gửi `HELO <tên>` đến Server.
-   - Nhận phản hồi `250 Hello <tên>`.
++-----------------+
+|     Client      |
+|-----------------|
+| LoginForm       |
+| MailClient      |
+| - Soạn thư      |
+| - Inbox         |
+| - Sent          |
++-----------------+
+         |
+         | TCP Socket (ObjectInputStream/ObjectOutputStream)
+         v
++-----------------+
+|     Server      |
+|-----------------|
+| SMTPServer      |
+| - inbox map     |
+| - sent map      |
+| - save/load     |
++-----------------+
+         ^
+         |
+   File messages.dat
 
-**Gửi lệnh MAIL FROM**
-   - Người dùng nhập email người gửi.
-   - Gửi `MAIL FROM:<email>`.
-   - Nhận phản hồi từ Server.
-
-**Gửi lệnh RCPT TO**
-   - Người dùng nhập email người nhận.
-   - Gửi `RCPT TO:<email>`.
-   - Nhận phản hồi từ Server.
-
-**Gửi lệnh DATA + nội dung email**
-   - Client gửi `DATA`.
-   - Sau đó cho phép người dùng nhập nhiều dòng nội dung.
-   - Kết thúc khi người dùng nhập dấu `.`.
-
-**Gửi lệnh QUIT**
-   - Client gửi `QUIT`.
-   - Nhận phản hồi `221 Bye`.
-   - Hiển thị:  
-     ```
-     ✅ Phiên SMTP đã kết thúc.
-     ```
 
 ---
 
@@ -79,7 +75,7 @@ BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
 <img width="581" height="296" alt="image" src="https://github.com/user-attachments/assets/d179b651-3d9d-48a5-a899-7cc6a0404188" />
 <img width="678" height="482" alt="image" src="https://github.com/user-attachments/assets/74acd59d-cdd7-4e10-bfcd-8dc7e7072f2d" />
 <img width="1363" height="483" alt="image" src="https://github.com/user-attachments/assets/ae40fbb8-9fbc-4780-8aca-5644273463a2" />
-![Uploading image.png…]()
+<img width="679" height="486" alt="image" src="https://github.com/user-attachments/assets/5d3e8be6-bb70-4f70-806f-6383b94f1727" />
 
 
 
@@ -161,6 +157,7 @@ java ClientGuiReceiver
 📧 Email: ducthuong246ss@gmail.com
 
 📱 Số điện thoại: 0865879212
+
 
 
 
