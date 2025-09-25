@@ -2,9 +2,9 @@
     <a href="https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin">
     🎓 Faculty of Information Technology (DaiNam University)
     </a>
-</h2>>
+</h2>
 <h2 align="center">
-   Gửi email mô phỏng SMTP qua Socket
+ GỬI EMAIL MÔ PHỎNG SMTP QUA SOCKET
 </h2>
 <div align="center">
     <p align="center">
@@ -150,11 +150,10 @@ java ClientGuiReceiver
 
 🎓 Lớp: CNTT 16-04
 
-📍 Địa chỉ: Hà Đông, Hà Nội
-
 📧 Email: ducthuong246ss@gmail.com
 
-📱 Số điện thoại: 0865879212
+
+
 
 
 
