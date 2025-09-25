@@ -55,6 +55,7 @@ BufferedReader, PrintWriter (gửi/nhận dữ liệu dạng text).
 🖼️ Giao diện đăng nhập
 
 <img width="581" height="296" alt="image" src="https://github.com/user-attachments/assets/d179b651-3d9d-48a5-a899-7cc6a0404188" />
+
 ➕ Giao diện Mail
 
 <img width="678" height="482" alt="image" src="https://github.com/user-attachments/assets/74acd59d-cdd7-4e10-bfcd-8dc7e7072f2d" />
@@ -147,6 +148,7 @@ java ClientGuiReceiver
 📧 Email: ducthuong246ss@gmail.com
 
 📱 Số điện thoại: 0865879212
+
 
 
 
